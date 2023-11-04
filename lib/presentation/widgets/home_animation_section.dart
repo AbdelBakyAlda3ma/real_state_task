@@ -14,9 +14,6 @@ class HomeAnimationSection extends StatefulWidget {
 }
 
 class _HomeAnimationSectionState extends State<HomeAnimationSection> {
-  int _currentPage = 0;
-  late Timer _timer;
-
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -24,19 +21,23 @@ class _HomeAnimationSectionState extends State<HomeAnimationSection> {
         _buildAnimatedCard(),
         const VerticalSpace(space: 10),
         _buildDotIndicator(),
+        const VerticalSpace(space: 8),
       ],
     );
   }
 
+  int _currentPage = 0;
+  late Timer _timer;
   @override
   void initState() {
     cotinueShowingCards();
-    WidgetsBinding.instance.addPostFrameCallback((_) async {
-      for (var card in listOfCards) {
-        precacheImage(AssetImage(card.image), context);
-      }
-    });
     super.initState();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _timer.cancel();
   }
 
   void cotinueShowingCards() {
@@ -51,12 +52,6 @@ class _HomeAnimationSectionState extends State<HomeAnimationSection> {
         });
       }
     });
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
-    _timer.cancel();
   }
 
   HomeDotIndicator _buildDotIndicator() {
@@ -74,9 +69,7 @@ class _HomeAnimationSectionState extends State<HomeAnimationSection> {
         color: AppColors.lightRed,
       ),
       child: AnimatedSwitcher(
-        duration: const Duration(milliseconds: 900),
-        switchInCurve: Curves.easeIn,
-        switchOutCurve: Curves.easeOut,
+        duration: const Duration(milliseconds: 700),
         child: AnimatedCard(
           key: ValueKey<int>(_currentPage),
           card: listOfCards[_currentPage],

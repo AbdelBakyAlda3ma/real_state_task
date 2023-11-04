@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:real_state_task/presentation/screens/home_screen.dart';
 import 'package:real_state_task/core/utils/app_colors.dart';
+import 'package:real_state_task/presentation/screens/home_screen.dart';
 
 void main() {
   runApp(const RealStateTask());
@@ -22,7 +22,7 @@ class RealStateTask extends StatelessWidget {
           seedColor: Colors.deepPurple,
           primary: AppColors.darkBlack,
         ),
-        useMaterial3: true,
+        // useMaterial3: true,
       ),
       home: const HomeScreen(),
     );

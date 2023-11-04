@@ -8,9 +8,11 @@ class HomeScreenAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       backgroundColor: AppColors.pureWhite,
+      elevation: 0,
       leading: const Icon(
         Icons.menu,
         size: 24,
+        color: AppColors.darkBlack,
       ),
       centerTitle: true,
       title: const Text(
