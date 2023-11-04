@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:real_state_task/core/widgets/custom_bottom_nav_bar.dart';
 import 'package:real_state_task/features/presentation/widgets/home_Screen_body.dart';
 import 'package:real_state_task/features/presentation/widgets/home_screen_app_bar.dart';
 
@@ -10,6 +11,7 @@ class HomeScreen extends StatelessWidget {
     return const Scaffold(
       appBar: HomeScreenAppBar(),
       body: HomeScreenBody(),
+      bottomNavigationBar: CustomBottomNavBar(),
     );
   }
 }
