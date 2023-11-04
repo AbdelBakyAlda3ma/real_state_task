@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:real_state_task/presentation/screens/home_screen.dart';
+import 'package:real_state_task/core/utils/app_colors.dart';
 
 void main() {
   runApp(const RealStateTask());
@@ -12,10 +13,14 @@ class RealStateTask extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
+        fontFamily: 'OutfitFont',
+        scaffoldBackgroundColor: AppColors.bgColor,
         colorScheme: ColorScheme.fromSeed(
           seedColor: Colors.deepPurple,
+          primary: AppColors.darkBlack,
         ),
         useMaterial3: true,
       ),
