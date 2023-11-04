@@ -4,7 +4,7 @@ import 'package:real_state_task/core/animated_card_model.dart';
 import 'package:real_state_task/core/utils/app_colors.dart';
 import 'package:real_state_task/core/widgets/animated_card.dart';
 import 'package:real_state_task/core/widgets/vertical_space.dart';
-import 'package:real_state_task/presentation/widgets/home_dot_indicator.dart';
+import 'package:real_state_task/features/presentation/widgets/home_dot_indicator.dart';
 
 class HomeAnimationSection extends StatefulWidget {
   const HomeAnimationSection({super.key});
@@ -69,7 +69,7 @@ class _HomeAnimationSectionState extends State<HomeAnimationSection> {
         color: AppColors.lightRed,
       ),
       child: AnimatedSwitcher(
-        duration: const Duration(milliseconds: 700),
+        duration: const Duration(milliseconds: 1000),
         child: AnimatedCard(
           key: ValueKey<int>(_currentPage),
           card: listOfCards[_currentPage],

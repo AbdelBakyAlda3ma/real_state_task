@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:real_state_task/core/category_item_model.dart';
 import 'package:real_state_task/core/widgets/vertical_space.dart';
-import 'package:real_state_task/presentation/widgets/category_item.dart';
+import 'package:real_state_task/features/presentation/widgets/category_item.dart';
 
 class CategoryListView extends StatelessWidget {
   const CategoryListView({super.key});

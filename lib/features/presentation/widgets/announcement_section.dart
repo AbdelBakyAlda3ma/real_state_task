@@ -25,7 +25,7 @@ class AnnouncementSection extends StatelessWidget {
           announcementContent,
           style: TextStyle(
             fontSize: 14,
-            fontWeight: FontWeight.w300,
+            fontWeight: FontWeight.w500,
             color: AppColors.achromatic500,
           ),
         ),

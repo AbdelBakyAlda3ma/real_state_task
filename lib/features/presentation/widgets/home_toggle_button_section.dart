@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:real_state_task/presentation/widgets/category_content.dart';
-import 'package:real_state_task/presentation/widgets/home_toggle_button.dart';
-import 'package:real_state_task/presentation/widgets/home_toggle_content.dart';
-import 'package:real_state_task/presentation/widgets/order_content.dart';
-import 'package:real_state_task/presentation/widgets/sevices_content.dart';
+import 'package:real_state_task/features/presentation/widgets/home_toggle_button.dart';
+import 'package:real_state_task/features/presentation/widgets/home_toggle_content.dart';
+import 'package:real_state_task/features/presentation/widgets/order_content.dart';
+import 'package:real_state_task/features/presentation/widgets/sevices_content.dart';
+import 'package:real_state_task/features/presentation/widgets/users_contet.dart';
 
 import '../../../../core/widgets/vertical_space.dart';
 
@@ -24,7 +24,7 @@ class _HomeToggleButtonSectionState extends State<HomeToggleButtonSection> {
   @override
   void initState() {
     toggelContent = [
-      const CategoryContent(),
+      const UsersContent(),
       const ServicesContet(),
       const OrderContent(),
     ];
