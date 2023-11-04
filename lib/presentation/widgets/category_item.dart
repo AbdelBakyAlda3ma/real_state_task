@@ -13,6 +13,7 @@ class CategoryItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Material(
       color: AppColors.pureWhite,
+      borderRadius: BorderRadius.circular(8),
       elevation: 0.5,
       child: Padding(
         padding: const EdgeInsets.all(20),

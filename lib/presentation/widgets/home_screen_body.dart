@@ -23,7 +23,6 @@ class HomeScreenBody extends StatelessWidget {
                 AnnouncementSection(),
                 VerticalSpace(space: 16),
                 HomeAnimationSection(),
-                VerticalSpace(space: 8),
               ],
             ),
           ),

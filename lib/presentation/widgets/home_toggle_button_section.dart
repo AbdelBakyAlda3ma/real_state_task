@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:real_state_task/presentation/widgets/category_content.dart';
 import 'package:real_state_task/presentation/widgets/home_toggle_button.dart';
 import 'package:real_state_task/presentation/widgets/home_toggle_content.dart';
+import 'package:real_state_task/presentation/widgets/order_content.dart';
+import 'package:real_state_task/presentation/widgets/sevices_content.dart';
 
 import '../../../../core/widgets/vertical_space.dart';
 
@@ -23,8 +25,8 @@ class _HomeToggleButtonSectionState extends State<HomeToggleButtonSection> {
   void initState() {
     toggelContent = [
       const CategoryContent(),
-      const CategoryContent(),
-      const CategoryContent(),
+      const ServicesContet(),
+      const OrderContent(),
     ];
     selectedWidget = toggelContent[0];
     super.initState();
@@ -35,6 +37,7 @@ class _HomeToggleButtonSectionState extends State<HomeToggleButtonSection> {
     return Expanded(
       child: Column(
         children: [
+          const VerticalSpace(space: 8),
           HomeToggleButton(
             onPressed: (index) {
               setState(() {
@@ -43,8 +46,12 @@ class _HomeToggleButtonSectionState extends State<HomeToggleButtonSection> {
             },
           ),
           const VerticalSpace(space: 16),
-          HomeToggleContent(
-            content: selectedWidget,
+          AnimatedContainer(
+            key: ValueKey<int>(toggelContent.indexOf(selectedWidget)),
+            duration: const Duration(milliseconds: 900),
+            child: HomeToggleContent(
+              content: selectedWidget,
+            ),
           ),
         ],
       ),
